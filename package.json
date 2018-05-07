@@ -1,0 +1,17 @@
+{
+  "name": "tslint-no-focused-test",
+  "version": "0.0.1",
+  "description": "Custom TSLint plugin to check for focused tests",
+  "main": "index.js",
+  "repository": "git@github.com:jasonmendes/tslint-no-focused-test.git",
+  "author": "Jason Mendes <jason@honua.co>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "jest",
+    "tslint",
+    "typescript",
+    "mocha",
+    "chai"
+  ]
+}
