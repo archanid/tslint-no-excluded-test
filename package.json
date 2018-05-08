@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "prepublish": "npm run lint:check && npm run build",
+    "prepublish": "npm run lint && npm run build",
     "build": "tsc",
     "tslint:fix": "tslint -c tslint.json 'src/**/*.ts' --fix",
     "tslint:check": "tslint -c tslint.json 'src/**/*.ts'",
