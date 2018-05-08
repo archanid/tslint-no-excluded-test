@@ -7,11 +7,27 @@
   "author": "Jason Mendes <jason@honua.co>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "prepublish": "npm run lint:check && npm run build",
+    "build": "tsc",
+    "tslint:fix": "tslint -c tslint.json 'src/**/*.ts' --fix",
+    "tslint:check": "tslint -c tslint.json 'src/**/*.ts'",
+    "prettier:fix": "prettier --config prettier.config.js --write 'src/**/*ts'",
+    "prettier:check": "prettier --config prettier.config.js --list-different 'src/**/*ts'",
+    "lint": "npm run tslint:check && npm run prettier:check",
+    "fix": "npm run tslint:fix && npm run prettier:fix"
+  },
   "keywords": [
     "jest",
     "tslint",
     "typescript",
     "mocha",
     "chai"
-  ]
+  ],
+  "dependencies": {
+    "@types/node": "^10.0.5",
+    "prettier": "^1.12.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  }
 }
