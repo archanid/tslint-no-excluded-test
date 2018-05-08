@@ -1,6 +1,6 @@
 {
   "name": "tslint-no-focused-test",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Custom TSLint plugin to check for focused tests",
   "main": "index.js",
   "repository": "git@github.com:jasonmendes/tslint-no-focused-test.git",
