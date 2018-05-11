@@ -38,8 +38,8 @@ configure in your `package.json`:
   "scripts": {
     "precommit": "lint-staged"
   },
-  lint-staged: {
-    *.ts: [tslint -c tslint.json 'test/**/*.test.ts']
+  "lint-staged": {
+    "*.ts": ["tslint -c tslint.json 'test/**/*.test.ts'"]
   }
 ```
 
