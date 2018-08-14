@@ -4,9 +4,10 @@ This is a custom [TSLint](https://palantir.github.io/tslint/) rule that checks
 for the following focused tests:
 
 * `fit`
-* `it.only`
 * `fdescribe`
+* `it.only`
 * `describe.only`
+* `context.only`
 
 The intended use case is as a pre-commit hook or build (CI/CD) task.
 
@@ -20,7 +21,7 @@ Then add the following to your `tslint.json`:
 
 ```
   "rulesDirectory": [
-    "node_modules/tslint-no-focused-test"
+    "tslint-no-focused-test"
   ],
   "rules": {
     "no-focused-test": true
