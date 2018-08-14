@@ -20,7 +20,7 @@ Then add the following to your `tslint.json`:
 
 ```
   "rulesDirectory": [
-    "node_modules/tslint-no-focused-test"
+    "tslint-no-focused-test"
   ],
   "rules": {
     "no-focused-test": true
