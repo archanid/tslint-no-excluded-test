@@ -17,4 +17,7 @@ fit(() => {});
 it.only(() => {});
 ~~~~~~~ [no-focused-tests]
 
+test.only(() => {});
+~~~~~~~~~ [no-focused-tests]
+
 [no-focused-tests]: Focused tests are not allowed

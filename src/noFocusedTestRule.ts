@@ -5,7 +5,7 @@ export class Rule extends Rules.AbstractRule {
   public static metadata: IRuleMetadata = {
     ruleName: 'no-focused-test',
     description:
-      'Disallows `fit`, `fdescribe`, `it.only`, `describe.only`, `context.only`.',
+      'Disallows `fit`, `fdescribe`, `it.only`, `test.only`, `describe.only`, `context.only`.',
     optionsDescription: 'Not configurable.',
     options: null,
     type: 'functionality',
@@ -13,7 +13,7 @@ export class Rule extends Rules.AbstractRule {
   };
 
   public static FAILURE_STRING = 'Focused tests are not allowed';
-  public static MATCH_REGEX = /^(fdescribe|fit|(context|describe|it)\.only)/;
+  public static MATCH_REGEX = /^(fdescribe|fit|(context|describe|it|test)\.only)/;
 
   public apply(sourceFile: SourceFile): RuleFailure[] {
     return this.applyWithWalker(

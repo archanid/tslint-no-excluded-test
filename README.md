@@ -8,6 +8,7 @@ for the following focused tests:
 * `it.only`
 * `describe.only`
 * `context.only`
+* `test.only`
 
 The intended use case is as a pre-commit hook or build (CI/CD) task.
 
