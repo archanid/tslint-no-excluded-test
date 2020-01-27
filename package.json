@@ -1,10 +1,10 @@
 {
-  "name": "tslint-no-focused-test",
-  "version": "0.5.0",
-  "description": "Custom TSLint plugin to check for focused tests",
+  "name": "tslint-no-excluded-test",
+  "version": "1.0.0",
+  "description": "Custom TSLint plugin to check for excluded tests",
   "main": "dist/index.js",
-  "repository": "git@github.com:jasonmendes/tslint-no-focused-test.git",
-  "author": "Jason Mendes <jason@honua.co>",
+  "repository": "git@github.com:archanid/tslint-no-excluded-test.git",
+  "author": "archanid <creativehandle@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -21,17 +21,15 @@
   "keywords": [
     "jest",
     "tslint",
-    "typescript",
-    "mocha",
-    "chai"
+    "typescript"
   ],
   "peerDependencies": {
     "tslint": ">=5.0.0"
   },
   "devDependencies": {
-    "@types/node": "^10.0.5",
-    "prettier": "^1.12.1",
-    "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
+    "@types/node": "^12.0.0",
+    "prettier": "^1.16.4",
+    "tslint": "^5.14.0",
+    "typescript": "^3.5.1"
   }
 }

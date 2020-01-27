@@ -1,6 +1,7 @@
 {
   "rulesDirectory": "../dist",
   "rules": {
-    "no-focused-test": true
+    "no-focused-test": true,
+    "no-skipped-test": true
   }
 }

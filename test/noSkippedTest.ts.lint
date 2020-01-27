@@ -1,0 +1,14 @@
+it(() => {});
+test(() => {});
+describe(() => {});
+
+it.skip(() => {});
+~~~~~~~ [no-skipped-tests]
+
+test.skip(() => {});
+~~~~~~~~~ [no-skipped-tests]
+
+describe.skip(() => {});
+~~~~~~~~~~~~~ [no-skipped-tests]
+
+[no-skipped-tests]: Skipped tests are not allowed

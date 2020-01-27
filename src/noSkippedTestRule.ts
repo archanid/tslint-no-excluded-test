@@ -3,26 +3,26 @@ import { CallExpression, SourceFile } from 'typescript';
 
 export class Rule extends Rules.AbstractRule {
   public static metadata: IRuleMetadata = {
-    ruleName: 'no-focused-test',
-    description: 'Disallows `it.only`, `test.only`, and `describe.only`.',
+    ruleName: 'no-skipped-test',
+    description: 'Disallows `it.skip`, `test.skip`, and `describe.skip`.',
     optionsDescription: 'Not configurable.',
     options: null,
     type: 'functionality',
     typescriptOnly: true,
   };
 
-  public static FAILURE_STRING = 'Focused tests are not allowed';
-  public static MATCH_REGEX = /^((describe|it|test)\.only)/;
+  public static FAILURE_STRING = 'Skipped tests are not allowed';
+  public static MATCH_REGEX = /^((describe|it|test)\.skip)/;
 
   public apply(sourceFile: SourceFile): RuleFailure[] {
     return this.applyWithWalker(
-      new NoFocusedTestWalker(sourceFile, this.getOptions()),
+      new NoSkippedTestWalker(sourceFile, this.getOptions()),
     );
   }
 }
 
 // tslint:disable max-classes-per-file
-class NoFocusedTestWalker extends RuleWalker {
+class NoSkippedTestWalker extends RuleWalker {
   public visitCallExpression(node: CallExpression) {
     const match = node.getText().match(Rule.MATCH_REGEX);
 
