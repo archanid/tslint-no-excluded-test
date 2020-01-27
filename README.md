@@ -1,14 +1,15 @@
-# 🔬 tslint-no-focused-test
+tslint-no-excluded-test
+=============
 
 This is a custom [TSLint](https://palantir.github.io/tslint/) rule that checks
-for the following focused tests:
+for the following:
 
-* `fit`
-* `fdescribe`
-* `it.only`
 * `describe.only`
-* `context.only`
+* `it.only`
 * `test.only`
+* `describe.skip`
+* `it.skip`
+* `test.skip`
 
 The intended use case is as a pre-commit hook or build (CI/CD) task.
 
@@ -16,16 +17,17 @@ The intended use case is as a pre-commit hook or build (CI/CD) task.
 
 Install the package with
 
-`npm install tslint-no-focused-test --save-dev` (or `yarn add tslint-no-focused-test --save-dev`).
+`npm install tslint-no-excluded-test --save-dev` (or `yarn add tslint-no-excluded-test --save-dev`).
 
 Then add the following to your `tslint.json`:
 
 ```
   "rulesDirectory": [
-    "tslint-no-focused-test"
+    "tslint-no-excluded-test"
   ],
   "rules": {
-    "no-focused-test": true
+    "no-focused-test": true,
+    "no-skipped-test": true
   }
 ```
 
